@@ -37,7 +37,7 @@ export default function Content() {
         if (isLoading) return;
         setIsLoading(true);
         try {
-            const response = await axios.post('http://192.168.1.68:8003/api/faucets/claim', {
+            const response = await axios.post('https://faucet-be.onrender.com/api/faucets/claim', {
                 address: address.trim(),
                 token_name: selected.name,
             });
